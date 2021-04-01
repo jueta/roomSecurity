@@ -193,11 +193,10 @@ void loop() {
     takeNewPhoto = false;
   }
 
-  if(valorPIR != digitalRead(pinPIR)){
-
-    if (valorPIR) {
+  if(digitalRead(pinPIR) == LOW){
+    if (valorPIR != digitalRead(pinPIR)) {
       Serial.println("DETECTADO");
-        if ((timer - millis()) > 1500){
+        if ((millis() - timer) > 10000){
           capturePhotoSaveSpiffs();
           timer = millis();
         }
@@ -205,12 +204,12 @@ void loop() {
     else {
       Serial.println("----");
     }
-
-    valorPIR = digitalRead(pinPIR);
   }
 
+  valorPIR = digitalRead(pinPIR);
 
-  delay(1);
+
+  delay(1000);
   
   }
 
