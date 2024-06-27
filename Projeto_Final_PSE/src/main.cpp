@@ -1,6 +1,12 @@
 /*********
-  PSE - Projeto Final
-  Grupo 1
+ * 
+ *  AUTHOR: @jueta
+ * 
+ * This code sets up an ESP32-CAM module to connect to a Wi-Fi network and host a web server. 
+ * The server allows a user to capture a photo and view the last captured photo through a web interface. 
+ * It also uses a PIR sensor to detect motion and automatically capture a photo if motion is detected. 
+ * The captured photos are saved in the SPIFFS filesystem of the ESP32.
+ * 
 *********/
 
 #include <Arduino.h>
@@ -20,8 +26,8 @@
 #include <FS.h>
 
 // Replace with your network credentials
-const char* ssid = "segundoAndarHolyHouse";
-const char* password = "4BCB0FA0";
+const char* ssid = "SNOWWHITE BIG";
+const char* password = "MRJ2023!";
 
 // Create AsyncWebServer object on port 80
 AsyncWebServer server(80);
