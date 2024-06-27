@@ -115,6 +115,9 @@ void setup() {
     delay(1000);
     Serial.println("Connecting to WiFi...");
   }
+
+
+  
   if (!SPIFFS.begin(true)) {
     Serial.println("An Error has occurred while mounting SPIFFS");
     ESP.restart();
