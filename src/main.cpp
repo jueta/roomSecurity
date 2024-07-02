@@ -23,19 +23,19 @@ AsyncWebServer server(80);
 boolean takeNewPhoto = false;
 
 
-
-
+const int pirPin = 14; // PIR sensor output pin connected to digital pin 2
+// Variable to store the PIR sensor state
+int pirState = LOW;
 volatile unsigned long timer;
-bool valorPIR;
 
 
 void setup() {
-  // Serial port for debugging purposes
-  Serial.begin(115200);
-
-  pinMode(pinPIR, INPUT);
-  timer = millis();
-  valorPIR = LOW;
+  // Initialize the PIR sensor pin as an input
+  pinMode(pirPin, INPUT);
+  // Initialize the flahslight pin as an output
+  // pinMode(lahslightPin, OUTPUT);
+  // Begin serial communication at a baud rate of 9600
+  Serial.begin(9600);
 
   // // Connect to Wi-Fi
   // WiFi.begin(ssid, password);
@@ -130,21 +130,22 @@ void loop() {
     takeNewPhoto = false;
   }
 
-  if(digitalRead(pinPIR) == LOW){
-    if (valorPIR != digitalRead(pinPIR)) {
-      Serial.println("DETECTADO");
-        if ((millis() - timer) > 10000){
-          // capturePhotoSaveSpiffs();
-          timer = millis();
-        }
-    } 
-    else {
-      Serial.println("----");
-    }
+  // Read the state of the PIR sensor
+  pirState = digitalRead(pirPin);
+
+  // If motion is detected, turn on the LED
+  if (pirState == HIGH) {
+    // digitalWrite(flashPin, HIGH);
+    Serial.println("Motion detected!");
+    if ((millis() - timer) > 10000){
+        // capturePhotoSaveSpiffs();
+        timer = millis();
+      }
+  } else {
+    // If no motion is detected, turn off the LED
+    // digitalWrite(flashPin, LOW);
+    Serial.println("No motion.");
   }
-
-  valorPIR = digitalRead(pinPIR);
-
 
   delay(1000);
   
