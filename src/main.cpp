@@ -23,7 +23,7 @@ AsyncWebServer server(80);
 boolean takeNewPhoto = false;
 
 
-const int pirPin = 14; // PIR sensor output pin connected to digital pin 2
+const int pirPin = 14; // PIR sensor output pin connected to digital pin
 // Variable to store the PIR sensor state
 int pirState = LOW;
 volatile unsigned long timer;
@@ -127,15 +127,15 @@ void loop() {
   
   if (takeNewPhoto) {
     capturePhotoSaveSpiffs();
-    takeNewPhoto = false;
-  }
+ 
+  }   takeNewPhoto = false;
 
   // Read the state of the PIR sensor
   pirState = digitalRead(pirPin);
 
   // If motion is detected, turn on the LED
   if (pirState == HIGH) {
-    // digitalWrite(flashPin, HIGH);
+    // digitalWrite(flashPin, HIGH);]  
     Serial.println("Motion detected!");
     if ((millis() - timer) > 10000){
         // capturePhotoSaveSpiffs();
@@ -150,5 +150,3 @@ void loop() {
   delay(1000);
   
   }
-
-
