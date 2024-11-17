@@ -39,3 +39,4 @@
 
 void capturePhotoSaveSpiffs( void );
 bool checkPhoto( fs::FS &fs );
+String sendPhoto();

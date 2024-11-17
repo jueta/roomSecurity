@@ -24,3 +24,10 @@ standby mode (Main function) -> reading FIR sensor and, case activated, take 3 p
 online mode (future idea) -> be able to take pictures from webpage.
 
 RGB led colours will indicate operation mode
+
+
+TUTORIALS FOLLOWED:
+
+https://randomnerdtutorials.com/esp32-cam-post-image-photo-server/
+
+https://randomnerdtutorials.com/raspberry-pi-apache-mysql-php-lamp-server/
