@@ -12,13 +12,11 @@
 #include <Arduino.h>
 #include "camera.h"
 #include <WiFi.h>
-#include "esp_camera.h"
 #include "esp_timer.h"
 #include "img_converters.h"
 #include "soc/soc.h"           // Disable brownour problems
 #include "soc/rtc_cntl_reg.h"  // Disable brownour problems
 #include "driver/rtc_io.h"
-#include <StringArray.h>
 #include <SPIFFS.h>
 #include <FS.h>
 #include "soc/rtc_cntl_reg.h"
