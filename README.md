@@ -9,11 +9,15 @@ RGB leds
 switch
 case
 
-FUNCTIONALITY:
+GOAL FUNCTIONALITY:
 
 Connect to local wifi through web-page to insert login password and email adress to be sent.
 
 off mode (HW implemented) -> using the switch to ON/OFF the device.
+
+Battery powered
+
+3D printed case - artistic and adaptable
 
 standby mode (Main function) -> reading FIR sensor and, case activated, take 3 pictures and send to email.
 
@@ -24,3 +28,15 @@ standby mode (Main function) -> reading FIR sensor and, case activated, take 3 p
 online mode (future idea) -> be able to take pictures from webpage.
 
 RGB led colours will indicate operation mode
+
+
+CURRENT FUNCTIONALITY:
+
+It's sending picture into a certain ip address (raspiberry pi). The raspberry Pi is connected to the same wifi network running a PHP server and storing the pictures. The idea is that esp32 can come back to sleep.
+
+
+TUTORIALS FOLLOWED:
+
+https://randomnerdtutorials.com/esp32-cam-post-image-photo-server/
+
+https://randomnerdtutorials.com/raspberry-pi-apache-mysql-php-lamp-server/
