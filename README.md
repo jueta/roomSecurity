@@ -1,5 +1,7 @@
 Project Description
 
+![alt text](docs/v3.JPG)
+
 HARDWARE:
 
 esp32-cam
