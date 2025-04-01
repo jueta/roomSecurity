@@ -42,3 +42,16 @@ TUTORIALS FOLLOWED:
 https://randomnerdtutorials.com/esp32-cam-post-image-photo-server/
 
 https://randomnerdtutorials.com/raspberry-pi-apache-mysql-php-lamp-server/
+
+
+
+Project references: 
+
+Rui Santos
+https://RandomNerdTutorials.com/esp32-cam-shield-pcb-telegram/
+
+Brian Lough's Universal Telegram Bot Library: 
+https://github.com/witnessmenow/Universal-Arduino-Telegram-Bot
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
